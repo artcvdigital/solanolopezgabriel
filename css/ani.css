@@ -1,0 +1,131 @@
+#indicator-ring{
+	animation: print_indicator_ring .2s ease-out;
+}
+@keyframes print_indicator_ring{
+	from{
+		transform: scale(2,2);
+		opacity: 0;
+	}
+	40%{
+		transform: scale(.85,.85);
+		opacity: .5;
+	}
+}
+#internal-ring-1{
+	animation: rotation_internal_ring_st 10s infinite linear;
+}
+@keyframes rotation_internal_ring_st{
+	to{
+		transform: rotate(360deg);
+	}
+}
+#internal-ring-2{
+	animation: grow_internal_ring_nd 1.2s infinite linear;
+}
+@keyframes grow_internal_ring_nd{
+	from{
+		transform: scale(0,0);
+		opacity: 0;
+	}
+	60%{
+		opacity: 1;
+		background: rgba(255,255,255,.1);
+	}
+	to{
+		transform: scale(1.5,1.5);
+		opacity: 0;
+	}
+}
+#indicator-ring::before{
+	animation: rotation_indicator_ring_before 4s infinite linear;
+}
+@keyframes rotation_indicator_ring_before{
+	to{
+		transform: rotate(-360deg);
+	}
+}
+#indicator-ring::after{
+	animation: rotation_indicator_ring_after 2.2s infinite linear;
+}
+@keyframes rotation_indicator_ring_after{
+	to{
+		transform: rotate(360deg);
+	}
+}
+.item-from-panel{
+	animation: left_slide_item_from_panel .2s ease-out;
+}
+@keyframes left_slide_item_from_panel{
+	from{
+		transform: translate(-4em,0);
+		opacity: 0;
+		letter-spacing: .5em;
+	}
+}
+#pointer-item-indicator{
+	animation: print_pointer_item_indicator .4s ease-out;
+}
+@keyframes print_pointer_item_indicator{
+	from{
+		transform: scale(9,9);
+		opacity: 0;
+	}
+	10%{
+		opacity: .5;
+	}
+	60%{
+		transform: scale(.2,.2);
+		opacity: 1;
+	}
+	85%{
+		transform: scale(2,2);
+	}
+}
+#pointer-item-indicator::before{
+	animation: rotation_pointer_item_indicator_before 3s infinite linear;
+}
+@keyframes rotation_pointer_item_indicator_before{
+	to{
+		transform: rotate(360deg);
+	}
+}
+#pointer-item-indicator::after{
+	animation: rotation_pointer_item_indicator_after 2s infinite linear;
+}
+@keyframes rotation_pointer_item_indicator_after{
+	to{
+		transform: rotate(-360deg);
+	}
+}
+.right-floor-3{
+	animation: slide_in_right_floor_rd .3s ease-out;
+}
+@keyframes slide_in_right_floor_rd{
+	from{
+		transform: translate(0,3em) rotateX(40deg) rotateY(-40deg);
+		opacity: 0;
+	}
+	60%{
+		transform: translate(0,-1em);
+	}
+}
+#grid-panel-top{
+	animation: slide_in_grid_panel_top .8s ease-out;
+}
+@keyframes slide_in_grid_panel_top{
+	from{
+		transform: rotateX(-40deg) rotateY(-40deg);
+		opacity: 0;
+	}
+}
+.sending-check-btn:focus{
+	animation: shake_sending_check_btn .5s ease-in-out;
+}
+@keyframes shake_sending_check_btn{
+	25%{
+		transform: scale(.8,.8);
+	}
+	60%{
+		transform: scale(1.1,1.1);
+	}
+}
